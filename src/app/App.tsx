@@ -3,43 +3,55 @@ import React from "react";
 import "../css/app.css";
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { Link, Route, Switch } from "react-router-dom";
-import { About } from "./screens/About";
-import { Home } from "./screens/Home";
-import { Users } from "./screens/Users";
+import { HomePage } from "./screens/homePage";
+import { PoductsPage } from "./screens/productsPage";
+import { OrdersPage } from "./screens/ordersPage";
+import { UserPage } from "./screens/userPage";
+import { HelpPage } from "./screens/helpPage";
 
 function App() {
   return (
     <div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">HomePage</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/products">ProductsPage</Link>
         </li>
         <li>
-          <Link to="/users">Users</Link>
+          <Link to="/orders">OrdersPage</Link>
+        </li>
+        <li>
+          <Link to="/member-page">userPage</Link>
+        </li>
+        <li>
+          <Link to="/help">HelpPage</Link>
         </li>
       </ul>
 
       <Switch>
-        <Route path="/about">
-          <About />
+        <Route path="/products">
+          <PoductsPage />
         </Route>
-        <Route path="/users">
-          <Users />
+        <Route path="/orders">
+          <OrdersPage />
+        </Route>
+        <Route path="/member-page">
+          <UserPage />
+        </Route>
+        <Route path="/member-page">
+          <UserPage />
+        </Route>
+        <Route path="/help">
+          <HelpPage />
         </Route>
         <Route path="/">
-          <Home />
+          <HomePage />
         </Route>
       </Switch>
     </div>
   );
 }
-
-
-
-
-
 
 export default App;
