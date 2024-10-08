@@ -1,6 +1,6 @@
 import React from "react";
 // import logo from "./logo.svg";
-import "../css/app.css";
+
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { Link, Route, Switch, useLocation } from "react-router-dom";
 import { HomePage } from "./screens/homePage";
@@ -11,7 +11,8 @@ import { HelpPage } from "./screens/helpPage";
 import { HomeNavbar } from "./components/headers/HomeNavbar";
 import { OtherNavbar } from "./components/headers/OtherNavbar";
 import { Footer } from "./components/footer";
-
+import "../css/app.css";
+import "../css/navbar.css";
 function App() {
   const location = useLocation();
   console.log("location", location);
@@ -29,9 +30,7 @@ function App() {
         <Route path="/member-page">
           <UserPage />
         </Route>
-        <Route path="/member-page">
-          <UserPage />
-        </Route>
+
         <Route path="/help">
           <HelpPage />
         </Route>
