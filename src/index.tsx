@@ -9,7 +9,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./app/MaterialTheme/";
 import "./css/index.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import ReactDOM from "react-dom";
+
 //
 const container = document.getElementById("root")!;
 const root = createRoot(container)
